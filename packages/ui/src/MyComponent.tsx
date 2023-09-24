@@ -1,14 +1,10 @@
-import { styled, YStack } from 'tamagui'
+import { MyButton } from './MyButton'
 
-export const MyComponent = styled(YStack, {
-  name: 'MyComponent',
-  backgroundColor: 'red',
-
-  variants: {
-    blue: {
-      true: {
-        backgroundColor: 'blue',
-      },
-    },
-  } as const,
-})
+export const MyComponent = () => {
+  return (
+    <>
+      <MyButton variant="simple">Press me</MyButton>
+      <MyButton variant="colorful">Mee too</MyButton>
+    </>
+  )
+}
